@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "CommonJS",
+    "lib": ["ES2020"],
+    "outDir": ".next/plugins",
+    "rootDir": "src/core/plugins",
+    "strict": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "allowJs": false,
+    "noEmit": false
+  },
+  "include": [
+    "src/core/plugins/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    ".next",
+    "**/*.test.ts",
+    "**/*.spec.ts"
+  ]
+}

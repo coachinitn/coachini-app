@@ -1,0 +1,44 @@
+import React from 'react';
+import { cn } from '@/core/utils';
+
+export interface IconProps extends React.SVGProps<SVGSVGElement> {}
+
+const PlusIcon = React.forwardRef<SVGSVGElement, IconProps>(({ className, ...props }, ref) => (
+  <svg 
+    ref={ref} 
+    {...props}
+    className={cn('', className)}
+    width="24"
+    height="25"
+    viewBox="0 0 24 25"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path 
+      d="M11.9996 8.41016V15.7365" 
+      stroke="currentColor" 
+      strokeWidth="1.5" 
+      strokeLinecap="round" 
+      strokeLinejoin="round"
+    />
+    <path 
+      d="M15.6663 12.0734H8.33301" 
+      stroke="currentColor" 
+      strokeWidth="1.5" 
+      strokeLinecap="round" 
+      strokeLinejoin="round"
+    />
+    <path 
+      fillRule="evenodd" 
+      clipRule="evenodd" 
+      d="M16.6857 2.08203H7.31429C4.04762 2.08203 2 4.39411 2 7.66719V16.4969C2 19.7699 4.0381 22.082 7.31429 22.082H16.6857C19.9619 22.082 22 19.7699 22 16.4969V7.66719C22 4.39411 19.9619 2.08203 16.6857 2.08203Z" 
+      stroke="currentColor" 
+      strokeWidth="1.5" 
+      strokeLinecap="round" 
+      strokeLinejoin="round"
+    />
+  </svg>
+));
+
+PlusIcon.displayName = 'PlusIcon';
+export default PlusIcon; 

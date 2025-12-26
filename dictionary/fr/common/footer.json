@@ -1,0 +1,21 @@
+{
+  "links": {
+    "termsAndConditions": "Conditions générales",
+    "accessibility": "Accessibilité",
+    "privacyPolicy": "Politique de confidentialité"
+  },
+  "copyright": "©2025 - Coachini | Tous droits réservés",
+  "contact": {
+    "phoneAlt": "Icône téléphone",
+    "whatsappAlt": "Icône WhatsApp",
+    "emailAlt": "Icône email",
+    "locationAlt": "Icône localisation"
+  },
+  "social": {
+    "linkedinAlt": "Icône LinkedIn",
+    "facebookAlt": "Icône Facebook",
+    "instagramAlt": "Icône Instagram",
+    "youtubeAlt": "Icône YouTube",
+    "tiktokAlt": "Icône TikTok"
+  }
+}

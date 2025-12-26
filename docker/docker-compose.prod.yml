@@ -1,0 +1,89 @@
+version: '3.8'
+
+services:
+  coachini-app:
+    container_name: coachini_frontend_prod
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: runner
+      args:
+        - NODE_ENV=production
+    ports:
+      - "3000:3000"
+    environment:
+      # Application Environment
+      - NODE_ENV=production
+      - PORT=3000
+      - HOSTNAME=0.0.0.0
+      - NEXT_TELEMETRY_DISABLED=1
+      
+      # NextAuth Configuration
+      - NEXTAUTH_URL=${NEXTAUTH_URL:-https://app.coachini.com}
+      - NEXTAUTH_SECRET=${NEXTAUTH_SECRET}
+      
+      # API Configuration
+      - NEXT_PUBLIC_API_URL=${NEXT_PUBLIC_API_URL:-https://api.coachini.com}
+      - API_BASE_URL=${API_BASE_URL:-https://api.coachini.com}
+      - API_TIMEOUT=${API_TIMEOUT:-30000}
+      
+      # Realtime WebSocket Configuration
+      - NEXT_PUBLIC_WS_URL=${NEXT_PUBLIC_WS_URL:-wss://api.coachini.com}
+      
+      # Realtime Feature Flags (Production Settings)
+      - NEXT_PUBLIC_REALTIME_ENABLED=true
+      - NEXT_PUBLIC_REALTIME_DEBUG=false
+      - NEXT_PUBLIC_REALTIME_NOTIFICATIONS=true
+      - NEXT_PUBLIC_REALTIME_MESSAGING=true
+      - NEXT_PUBLIC_REALTIME_SUBSCRIPTIONS=true
+      - NEXT_PUBLIC_REALTIME_PRESENCE=true
+      - NEXT_PUBLIC_REALTIME_ENCRYPTION=true
+      
+      # Realtime Logging (Production)
+      - NEXT_PUBLIC_REALTIME_LOG_LEVEL=warn
+      
+      # Security Configuration (Production)
+      - NEXT_PUBLIC_SECURITY_LEVEL=high
+      
+      # Database Configuration
+      - DATABASE_URL=${DATABASE_URL}
+      
+    volumes:
+      # Persistent logs for Plesk
+      - /var/www/vhosts/${DOMAIN:-coachini.com}/logs/frontend:/app/logs
+      # Static assets backup
+      - /var/www/vhosts/${DOMAIN:-coachini.com}/frontend-assets:/app/public:ro
+      
+    networks:
+      - coachini-network
+      
+    restart: unless-stopped
+    
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3000/", "||", "exit", "1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+      
+    deploy:
+      resources:
+        limits:
+          cpus: '2.0'
+          memory: 2G
+        reservations:
+          cpus: '0.5'
+          memory: 512M
+          
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "5"
+
+# Networks
+networks:
+  coachini-network:
+    driver: bridge
+    name: coachini-network
+    external: true  # Connect to existing backend network if available

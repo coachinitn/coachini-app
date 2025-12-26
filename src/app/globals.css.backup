@@ -1,0 +1,22 @@
+/**
+ * Generated theme file
+ * Generated on: 2025-08-14T14:48:34.191Z
+ * Theme count: 2
+ */
+
+/* Import design system color variables */
+@import "../styles/colors.css";
+
+/* Import base theme styles */
+@import "../styles/theme-base.css";
+@import "../styles/general.css";
+
+/* Import theme files */
+@import "../styles/light-theme.css";
+@import "../styles/dark-theme.css";
+
+@import "tailwindcss";
+
+@plugin "tailwindcss-animate";
+
+@custom-variant dark (&:is(.dark *));

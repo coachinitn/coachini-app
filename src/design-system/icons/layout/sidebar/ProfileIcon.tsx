@@ -1,0 +1,32 @@
+import React from 'react';
+import { cn } from '@/core/utils';
+
+export interface IconProps extends React.SVGProps<SVGSVGElement> {}
+
+const ProfileIcon = React.forwardRef<SVGSVGElement, IconProps>(({ className, ...props }, ref) => (
+  <svg
+    ref={ref}
+    {...props}
+    className={cn('', className)}
+    width="28"
+    height="29"
+    viewBox="0 0 28 29"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g clipPath="url(#clip0_40000317_105795)">
+      <path
+        d="M17.267 7.5474V7.78073C17.267 8.67906 16.532 9.41406 15.6337 9.41406H4.63333C3.65841 9.41406 3 8.61398 3 7.61398V7.58069C3 6.68236 3.735 5.91406 4.63333 5.91406L15.6337 5.91406C16.532 5.91406 17.267 6.64906 17.267 7.5474ZM22.167 14.0807C22.167 14.9791 21.432 15.7141 20.5337 15.7141H10.467C9.56866 15.7141 8.83366 14.9791 8.83366 14.0807C8.83366 13.1824 9.56866 12.4474 10.467 12.4474H20.5337C21.432 12.4474 22.167 13.1824 22.167 14.0807ZM21.8337 20.6141C21.8337 21.5124 21.0987 22.2474 20.2003 22.2474H15.467C14.5687 22.2474 13.8337 21.5124 13.8337 20.6141C13.8337 19.7157 14.5687 18.9807 15.467 18.9807H20.2003C21.0987 18.9807 21.8337 19.7157 21.8337 20.6141Z"
+        fill="currentColor"
+      />
+    </g>
+    <defs>
+      <clipPath id="clip0_40000317_105795">
+        <rect width="28" height="28" fill="white" transform="translate(0 0.078125)"/>
+      </clipPath>
+    </defs>
+  </svg>
+));
+
+ProfileIcon.displayName = 'ProfileIcon';
+export default ProfileIcon; 

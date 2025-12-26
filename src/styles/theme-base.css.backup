@@ -1,0 +1,114 @@
+/**
+ * Theme Base CSS
+ * Generated on: 2025-08-14T14:48:34.191Z
+ * This file is auto-generated from Contains shared theme variables and CSS
+ */
+:root {
+  --radius: 0.625rem;
+}
+
+@theme inline {
+  /* Background */
+  --color-background: var(--background, #EFEFEF);
+  --color-background-muted: var(--background-muted, #f9fafb);
+  --color-background-subtle: var(--background-subtle, #f3f4f6);
+  --color-background-emphasis: var(--background-emphasis, #e5e7eb);
+  --color-background-test: var(--background-test, #6b7280);
+  --color-background-hello: var(--background-hello, #10b981);
+  --color-background-page: var(--background-page, #FCFBF7);
+
+  /* Foreground */
+  --color-foreground: var(--foreground, #090203);
+  --color-foreground-muted: var(--foreground-muted, #64748b);
+  --color-foreground-subtle: var(--foreground-subtle, #9ca3af);
+  --color-foreground-emphasis: var(--foreground-emphasis, #84A5D2);
+  --color-foreground-chat: var(--foreground-chat, #fcfbf7);
+
+  /* Card */
+  --color-card: var(--card, #ffffff);
+  --color-card-foreground: var(--card-foreground, #111827);
+
+  /* Popover */
+  --color-popover: var(--popover, #ffffff);
+  --color-popover-foreground: var(--popover-foreground, #111827);
+
+  /* Text */
+  --color-text: var(--text, #090203);
+  --color-text-muted: var(--text-muted, #64748b);
+
+  /* Muted */
+  --color-muted: var(--muted, #f3f4f6);
+  --color-muted-foreground: var(--muted-foreground, #64748b);
+
+  /* Accent */
+  --color-accent: var(--accent, #f3f4f6);
+  --color-accent-foreground: var(--accent-foreground, #111827);
+
+  /* Destructive */
+  --color-destructive: var(--destructive, #ef4444);
+  --color-destructive-foreground: var(--destructive-foreground, #f9fafb);
+
+  /* Border */
+  --color-border: var(--border, #e5e7eb);
+  --color-border-muted: var(--border-muted, #f3f4f6);
+  --color-border-emphasis: var(--border-emphasis, #d1d5db);
+  --color-border-focus: var(--border-focus, #3b82f6);
+
+  /* Input */
+  --color-input: var(--input, #e5e7eb);
+
+  /* Ring */
+  --color-ring: var(--ring, #9ca3af);
+
+  /* Chart */
+  --color-chart: var(--chart);
+  --color-chart-1: var(--chart-1, #6b93c8);
+  --color-chart-2: var(--chart-2, #60a5fa);
+  --color-chart-3: var(--chart-3, #fbbf24);
+  --color-chart-4: var(--chart-4, #34d399);
+  --color-chart-5: var(--chart-5, #f87171);
+
+  /* Sidebar */
+  --color-sidebar: var(--sidebar, #f9fafb);
+  --color-sidebar-foreground: var(--sidebar-foreground, #111827);
+  --color-sidebar-primary: var(--sidebar-primary, #111827);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground, #f9fafb);
+  --color-sidebar-accent: var(--sidebar-accent, #f3f4f6);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground, #111827);
+  --color-sidebar-border: var(--sidebar-border, #e5e7eb);
+  --color-sidebar-ring: var(--sidebar-ring, #9ca3af);
+
+  /* Fonts - Poppins only */
+  --font-sans: var(--font-poppins);
+  
+  /* Radius values */
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  
+  /* Set Poppins as the default font with proper fallbacks */
+  .font-sans {
+    font-family: var(--font-poppins), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+}
+
+/* #region RTL CSS */
+.omit-rtl {
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+.inherit-dir {
+  direction: inherit;
+  unicode-bidi: inherit;
+}
+/* End of RTL CSS */

@@ -1,0 +1,1 @@
+[2025-05-09T13:59:57.497Z] [INFO] [auth] Test log message {"source":"logger-demo","timestamp":"2025-05-09T13:59:50.785Z"}

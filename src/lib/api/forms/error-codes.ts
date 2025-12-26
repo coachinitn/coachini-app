@@ -1,0 +1,33 @@
+/**
+ * Forms Error Codes
+ *
+ * Shared error codes between backend and frontend for consistent i18n mapping
+ */
+
+export const FORMS_ERROR_CODES = {
+  FORM_NOT_FOUND: 'FORM_NOT_FOUND',
+  FORM_INVALID: 'FORM_INVALID',
+  FORM_ALREADY_PUBLISHED: 'FORM_ALREADY_PUBLISHED',
+  FORM_NOT_PUBLISHED: 'FORM_NOT_PUBLISHED',
+  FORM_ARCHIVED: 'FORM_ARCHIVED',
+  FIELD_INVALID: 'FIELD_INVALID',
+  FIELD_NOT_FOUND: 'FIELD_NOT_FOUND',
+  RESPONSE_NOT_FOUND: 'RESPONSE_NOT_FOUND',
+  DUPLICATE_FORM: 'DUPLICATE_FORM',
+  INVALID_FORM_DATA: 'INVALID_FORM_DATA',
+  RESPONSE_VALIDATION_FAILED: 'RESPONSE_VALIDATION_FAILED',
+} as const;
+
+export const FORMS_ERROR_CODE_TO_I18N_MAP: Record<string, string> = {
+  [FORMS_ERROR_CODES.FORM_NOT_FOUND]: 'errors.formNotFound',
+  [FORMS_ERROR_CODES.FORM_INVALID]: 'errors.invalidFormData',
+  [FORMS_ERROR_CODES.FORM_ALREADY_PUBLISHED]: 'errors.formAlreadyPublished',
+  [FORMS_ERROR_CODES.FORM_NOT_PUBLISHED]: 'errors.formNotPublished',
+  [FORMS_ERROR_CODES.FORM_ARCHIVED]: 'errors.formArchived',
+  [FORMS_ERROR_CODES.FIELD_INVALID]: 'errors.invalidFormField',
+  [FORMS_ERROR_CODES.FIELD_NOT_FOUND]: 'errors.formFieldNotFound',
+  [FORMS_ERROR_CODES.RESPONSE_NOT_FOUND]: 'errors.formResponseNotFound',
+  [FORMS_ERROR_CODES.DUPLICATE_FORM]: 'errors.duplicateForm',
+  [FORMS_ERROR_CODES.INVALID_FORM_DATA]: 'errors.invalidFormData',
+  [FORMS_ERROR_CODES.RESPONSE_VALIDATION_FAILED]: 'errors.responseValidationFailed',
+};

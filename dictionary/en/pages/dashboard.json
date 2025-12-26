@@ -1,0 +1,12 @@
+{
+  "metadata": {
+    "title": "Main Dashboard",
+    "description": "Manage your account, teams, and settings in the dashboard."
+  },
+  "navigation": {
+    "profile": "Profile",
+    "teams": "Teams",
+    "requests": "Requests",
+    "themes": "Themes"
+  }
+} 

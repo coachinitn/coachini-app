@@ -1,0 +1,16 @@
+{
+  "roleSelector": {
+    "title": "Personnalisez votre démo",
+    "subtitle": "Choisissez votre rôle",
+    "coach": {
+      "title": "Coach",
+      "description": "Pour les coachs qui veulent créer un compte sur coachini.net",
+      "cta": "Demander une démo"
+    },
+    "business": {
+      "title": "Entreprise",
+      "description": "Pour les entreprises qui veulent créer un compte sur coachini.net",
+      "cta": "Demander une démo"
+    }
+  }
+}

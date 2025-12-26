@@ -1,0 +1,163 @@
+{
+    "folder-color.pathColors": [
+        {
+            "folderPath": "next-app-i18n-starter-main\\src\\design-system\\",
+            "badge": "🎀",
+            "color": "foldercolorizer.color_cc0033"
+        },
+        {
+            "folderPath": "next-app-i18n-starter-main\\src\\app\\",
+            "color": "foldercolorizer.color_ff99ff",
+            "badge": "💻"
+        },
+        {
+            "folderPath": "next-app-i18n-starter-main\\src\\core\\",
+            "badge": "📍",
+            "color": "foldercolorizer.color_ffff66"
+        },
+        {
+            "folderPath": "next-app-i18n-starter-main\\src\\app\\api\\",
+            "color": "foldercolorizer.color_ff9933",
+            "badge": "📞"
+        },
+        {
+            "folderPath": "next-app-i18n-starter-main\\src\\app\\[locale]\\dashboard\\",
+            "badge": "🌱",
+            "color": "foldercolorizer.color_9999ff"
+        },
+        {
+            "folderPath": "next-app-i18n-starter-main\\src\\styles\\",
+            "badge": "S",
+            "color": "foldercolorizer.color_666666"
+        },
+        {
+            "folderPath": "next-app-i18n-starter-main\\dictionary\\",
+            "color": "foldercolorizer.color_669900",
+            "badge": "📚"
+        },
+        {
+            "folderPath": "next-app-i18n-starter-main\\scripts\\",
+            "color": "foldercolorizer.color_00ccff"
+        },
+        {
+            "folderPath": "next-app-i18n-starter-main\\src\\design-system\\ui\\",
+            "badge": "🥼"
+        },
+        {
+            "folderPath": "next-app-i18n-starter-main\\src\\design-system\\ui\\atoms\\",
+            "badge": "⚛️",
+            "color": "foldercolorizer.color_ff6666"
+        },
+        {
+            "folderPath": "next-app-i18n-starter-main\\src\\design-system\\ui\\molecules\\",
+            "badge": "🧬",
+            "color": "foldercolorizer.color_ff0033"
+        },
+        {
+            "folderPath": "next-app-i18n-starter-main\\src\\design-system\\ui\\organisms\\",
+            "badge": "🦠",
+            "color": "foldercolorizer.color_ff6600"
+        },
+        {
+            "folderPath": "next-app-i18n-starter-main\\src\\design-system\\ui\\templates\\",
+            "badge": "�",
+            "color": "foldercolorizer.color_ff3300"
+        },
+        {
+            "folderPath": "next-app-i18n-starter-main\\src\\design-system\\ui\\__examples__\\",
+            "badge": "📚",
+            "color": "foldercolorizer.color_99cc99"
+        }
+    ],
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "**/node_modules": false,
+        "**/CVS": true
+    },
+    "explorer.sortOrder": "default",
+
+    // TypeScript auto-import settings
+    "typescript.suggest.autoImports": true,
+    "typescript.suggest.includeCompletionsForModuleExports": true,
+    "typescript.preferences.importModuleSpecifier": "shortest",
+    "typescript.preferences.importModuleSpecifierEnding": "minimal",
+
+    // File nesting for better organization
+    "explorer.fileNesting.enabled": true,
+    "explorer.fileNesting.patterns": {
+        "index.tsx": "*.module.css, *.styles.ts, *.test.tsx, *.stories.tsx",
+        "index.ts": "*.d.ts, *.test.ts"
+    },
+
+    "rust-analyzer.workspace.discoverConfig": null,
+
+    // Tailwind CSS Extension Configuration
+    "tailwindCSS.includeLanguages": {
+        "typescript": "typescript",
+        "typescriptreact": "typescriptreact"
+    },
+    "tailwindCSS.experimental.classRegex": [
+        ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
+        ["cx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"],
+        ["cn\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+    ],
+    "tailwindCSS.files.exclude": [
+        "**/.git/**",
+        "**/node_modules/**",
+        "**/.next/**",
+        "**/dist/**"
+    ],
+    "tailwindCSS.classAttributes": [
+        "class",
+        "className",
+        "ngClass"
+    ],
+
+    // Tailwind CSS v4 Configuration - Point to your main CSS file
+    "tailwindCSS.experimental.configFile": "./src/app/globals.css",
+
+    // CSS Language Server Configuration
+    "css.validate": true,
+    "css.lint.unknownAtRules": "ignore",
+    "css.customData": [".vscode/css_custom_data.json"],
+    "css.completion.completePropertyWithSemicolon": false,
+    "css.completion.triggerPropertyValueCompletion": true,
+    "css.hover.documentation": true,
+    "css.hover.references": true,
+
+    // File associations for better CSS intellisense
+    "files.associations": {
+        "*.css": "tailwindcss"
+    },
+
+    // Emmet configuration for Tailwind
+    "emmet.includeLanguages": {
+        "typescript": "html",
+        "typescriptreact": "html"
+    },
+
+    // Disable potentially conflicting extension features
+    "scss.completion.completePropertyWithSemicolon": false,
+    "scss.completion.triggerPropertyValueCompletion": false,
+
+    // Ensure Tailwind CSS extension takes priority
+    "tailwindCSS.hovers": true,
+    "tailwindCSS.suggestions": true,
+    "tailwindCSS.colorDecorators": true,
+
+    // CSS Navigation Configuration (for better CSS go-to-definition)
+    "CSSNavigation.enableGoToDefinition": true,
+    "CSSNavigation.enableWorkspaceSymbols": true,
+    "CSSNavigation.enableFindAllReferences": true,
+    "CSSNavigation.alwaysIncludeImportedFiles": true,
+    "CSSNavigation.includeLanguages": [
+        "typescript",
+        "typescriptreact",
+        "javascript",
+        "javascriptreact"
+    ]
+}

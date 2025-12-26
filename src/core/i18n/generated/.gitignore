@@ -1,0 +1,6 @@
+# Ignore generated translation bundles
+*.json
+index.ts
+
+# But keep the directory structure
+!.gitkeep 

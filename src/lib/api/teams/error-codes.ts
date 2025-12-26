@@ -1,0 +1,33 @@
+/**
+ * Teams Error Codes
+ *
+ * Shared error codes between backend and frontend for consistent i18n mapping
+ */
+
+export const TEAMS_ERROR_CODES = {
+  TEAM_NOT_FOUND: 'TEAM_NOT_FOUND',
+  TEAM_INVALID: 'TEAM_INVALID',
+  TEAM_ARCHIVED: 'TEAM_ARCHIVED',
+  MEMBER_NOT_FOUND: 'MEMBER_NOT_FOUND',
+  MEMBER_ALREADY_EXISTS: 'MEMBER_ALREADY_EXISTS',
+  MEMBER_INVALID_ROLE: 'MEMBER_INVALID_ROLE',
+  EMPLOYEE_NOT_FOUND: 'EMPLOYEE_NOT_FOUND',
+  EMPLOYEE_ALREADY_EXISTS: 'EMPLOYEE_ALREADY_EXISTS',
+  DUPLICATE_TEAM: 'DUPLICATE_TEAM',
+  INVALID_TEAM_DATA: 'INVALID_TEAM_DATA',
+  PERMISSION_DENIED: 'PERMISSION_DENIED',
+} as const;
+
+export const TEAMS_ERROR_CODE_TO_I18N_MAP: Record<string, string> = {
+  [TEAMS_ERROR_CODES.TEAM_NOT_FOUND]: 'errors.teamNotFound',
+  [TEAMS_ERROR_CODES.TEAM_INVALID]: 'errors.invalidTeamData',
+  [TEAMS_ERROR_CODES.TEAM_ARCHIVED]: 'errors.teamArchived',
+  [TEAMS_ERROR_CODES.MEMBER_NOT_FOUND]: 'errors.teamMemberNotFound',
+  [TEAMS_ERROR_CODES.MEMBER_ALREADY_EXISTS]: 'errors.teamMemberAlreadyExists',
+  [TEAMS_ERROR_CODES.MEMBER_INVALID_ROLE]: 'errors.invalidTeamMemberRole',
+  [TEAMS_ERROR_CODES.EMPLOYEE_NOT_FOUND]: 'errors.employeeNotFound',
+  [TEAMS_ERROR_CODES.EMPLOYEE_ALREADY_EXISTS]: 'errors.employeeAlreadyExists',
+  [TEAMS_ERROR_CODES.DUPLICATE_TEAM]: 'errors.duplicateTeam',
+  [TEAMS_ERROR_CODES.INVALID_TEAM_DATA]: 'errors.invalidTeamData',
+  [TEAMS_ERROR_CODES.PERMISSION_DENIED]: 'errors.permissionDenied',
+};

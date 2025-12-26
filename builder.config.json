@@ -1,0 +1,6 @@
+{
+  "command": "npm run dev",
+  "serverUrl": "vcp://quickcopy/vcp-2ee7632d8f8f4a8683adb61c31949905 --spaceId 14ac74d0035d488e97c69f5779330079",
+  "authenticateProxy": false,
+  "commitMode": "commits"
+}
